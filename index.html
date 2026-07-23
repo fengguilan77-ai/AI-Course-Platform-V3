@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI智慧课程平台｜人工智能与广告创意设计</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <section id="landingPage" class="page active">
+    <header class="public-header">
+      <a class="brand" href="#" onclick="showPage('landingPage')"><span class="brand-mark">AI</span><span><strong>AI智慧课程平台</strong><small>广州工商学院 · 商学院</small></span></a>
+      <nav><a href="#courseIntro">课程介绍</a><a href="#mechanism">成长机制</a><button class="ghost-btn" onclick="openLogin('student')">学生入口</button><button class="primary-btn" onclick="openLogin('teacher')">教师入口</button></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy"><span class="eyebrow">AI + ADVERTISING CREATIVE DESIGN</span><h1>《人工智能与广告创意设计》<br><em>过程性学习平台</em></h1><p>以真实项目为载体，将章节学习、任务实践、AI诊断、教师评价与成长激励贯通，形成“任务积分—能力画像—成长档案”三位一体闭环。</p><div class="hero-actions"><button class="primary-btn large" onclick="openLogin('student')">进入学生端</button><button class="ghost-btn large" onclick="openLogin('teacher')">进入教师端</button></div><div class="hero-meta"><span>8个课程项目</span><span>46名学生数据</span><span>全过程评价</span></div></div>
+        <div class="hero-visual"><div class="visual-card main-card"><div class="card-top"><span>本周成长进度</span><b>76%</b></div><div class="progress"><i style="width:76%"></i></div><div class="mini-grid"><div><b>680</b><span>任务积分</span></div><div><b>86</b><span>能力指数</span></div><div><b>12</b><span>成长记录</span></div></div></div><div class="visual-card float-card one">AI诊断<br><b>策略逻辑 +8</b></div><div class="visual-card float-card two">教师评价<br><b>创意表达优秀</b></div><div class="orb"></div></div>
+      </section>
+      <section id="mechanism" class="section"><div class="section-title"><span>GROWTH MECHANISM</span><h2>三位一体成长激励机制</h2><p>每一次学习行为都可记录、可评价、可反馈、可成长。</p></div><div class="mechanism-grid"><article><span class="number">01</span><div class="icon">★</div><h3>任务积分</h3><p>观看资源、完成测验、提交作品、课堂互动与优秀成果均形成积分，明确“为什么得分”。</p><ul><li>章节学习积分</li><li>实践任务积分</li><li>作品质量积分</li></ul></article><article><span class="number">02</span><div class="icon">◎</div><h3>能力画像</h3><p>积分按能力维度自动归集，动态形成品牌分析、创意思维、AI应用、视觉表达和市场洞察画像。</p><ul><li>多维雷达画像</li><li>优势短板诊断</li><li>个性化学习建议</li></ul></article><article><span class="number">03</span><div class="icon">↗</div><h3>成长档案</h3><p>持续沉淀任务成果、AI反馈、教师评价、迭代版本和竞赛成果，形成可追溯的成长证据链。</p><ul><li>全过程作品记录</li><li>评价与迭代轨迹</li><li>竞赛成果沉淀</li></ul></article></div></section>
+      <section id="courseIntro" class="section course-intro"><div class="section-title"><span>COURSE MAP</span><h2>八章项目化课程地图</h2></div><div id="publicChapterGrid" class="chapter-grid"></div></section>
+    </main><footer>广州工商学院 商学院 · 《人工智能与广告创意设计》课程团队</footer>
+  </section>
+
+  <section id="loginPage" class="page login-page"><div class="login-aside"><button class="back-link" onclick="showPage('landingPage')">← 返回平台首页</button><div><span class="eyebrow">PROCESS-BASED LEARNING</span><h2>让每一次任务<br>成为成长的证据</h2><p>学习过程不再止于成绩，而是转化为积分、能力与档案。</p></div><div class="login-mechanism"><span>任务积分</span><i>→</i><span>能力画像</span><i>→</i><span>成长档案</span></div></div><div class="login-panel"><form class="login-card" onsubmit="handleLogin(event)"><div class="brand compact"><span class="brand-mark">AI</span><strong>AI智慧课程平台</strong></div><h2 id="loginTitle">学生登录</h2><p>体验账号已自动填写，直接点击登录。</p><input type="hidden" id="roleInput" value="student" /><label>账号<input id="accountInput" value="20260001" required /></label><label>密码<input id="passwordInput" type="password" value="123456" required /></label><button class="primary-btn login-submit" type="submit">登录平台</button><div class="demo-tip">学生演示：20260001 / 123456<br>教师演示：teacher / 123456</div></form></div></section>
+
+  <section id="studentApp" class="page app-page"><aside class="sidebar"><div class="brand inverse"><span class="brand-mark">AI</span><span><strong>智慧课程平台</strong><small>学生学习空间</small></span></div><nav class="side-nav"><button class="active" data-view="studentHome">⌂<span>学习首页</span></button><button data-view="studentCourse">▣<span>我的课程</span></button><button data-view="studentTasks">✓<span>任务中心</span></button><button data-view="studentGrowth">☆<span>成长中心</span></button><button data-view="studentPortfolio">▤<span>成长档案</span></button></nav><button class="logout" onclick="logout()">退出登录</button></aside><div class="app-main"><header class="app-header"><div><small>《人工智能与广告创意设计》</small><h2 id="studentViewTitle">学习首页</h2></div><div class="user-box"><span class="points">★ 680积分</span><div class="avatar">何</div><span><b>何梓烨</b><small>广告学2301班</small></span></div></header><main class="view-container"><section id="studentHome" class="app-view active"></section><section id="studentCourse" class="app-view"></section><section id="studentTasks" class="app-view"></section><section id="studentGrowth" class="app-view"></section><section id="studentPortfolio" class="app-view"></section></main></div></section>
+
+  <section id="teacherApp" class="page app-page"><aside class="sidebar teacher-side"><div class="brand inverse"><span class="brand-mark">AI</span><span><strong>智慧课程平台</strong><small>教师管理空间</small></span></div><nav class="side-nav"><button class="active" data-view="teacherDashboard">⌂<span>数据驾驶舱</span></button><button data-view="teacherCourse">▣<span>课程管理</span></button><button data-view="teacherTasks">✓<span>任务管理</span></button><button data-view="teacherStudents">♙<span>学生成长</span></button><button data-view="teacherEvaluation">◎<span>评价中心</span></button></nav><button class="logout" onclick="logout()">退出登录</button></aside><div class="app-main"><header class="app-header"><div><small>《人工智能与广告创意设计》</small><h2 id="teacherViewTitle">数据驾驶舱</h2></div><div class="user-box"><div class="avatar teacher-avatar">冯</div><span><b>冯老师</b><small>课程负责人</small></span></div></header><main class="view-container"><section id="teacherDashboard" class="app-view active"></section><section id="teacherCourse" class="app-view"></section><section id="teacherTasks" class="app-view"></section><section id="teacherStudents" class="app-view"></section><section id="teacherEvaluation" class="app-view"></section></main></div></section>
+
+  <div id="chapterModal" class="modal"><div class="modal-card"><button class="modal-close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
